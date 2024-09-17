@@ -5,7 +5,7 @@ import 'package:famestar/screen/post.dart';
 import 'package:famestar/screen/profile.dart';
 import 'package:flutter/material.dart';
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomeScreen(),
     );
@@ -60,9 +60,9 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Center(
         child: widgetList[myIndex],
       ),
-      backgroundColor: Colors.blue[200],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
+        showUnselectedLabels: false,
         backgroundColor: Colors.red[400],
         fixedColor: Colors.white,
         currentIndex: myIndex,
